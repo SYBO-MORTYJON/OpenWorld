@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uz" xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Open World</title>
+    <link rel = "icon" href =
+            "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png"
+          type = "image/x-icon">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.3/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+
+<div sec:authorize="isAnonymous()">
+
+</div>
+
+<div layout:fragment="content">
+
+</div>
+<script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.5.3/js/bootstrap.bundle.js}"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

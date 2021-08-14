@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uz" xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layout}">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+<body>
+<div layout:fragment="content">
+
+
+    <form method="post" action="/login">
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <!-- Tabs Titles -->
+                <h2 class="active"> Sign In </h2>
+                <h2 class="inactive underlineHover">Sign Up </h2>
+
+                <!-- Icon -->
+                <div class="fadeIn first">
+                    <img src="https://lh3.googleusercontent.com/d_MGJRC6h5-HG7aaTjKeyM6W5JgovID0kHQ9Gy2N3Pkbh1GnarFyVEJicMgXLZhrQso=w300" id="icon" alt="User Icon" />
+                </div>
+
+                <!-- Login Form -->
+                <form>
+                    <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username">
+                    <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+                    <input type="submit" class="fadeIn fourth" value="Log In">
+                </form>
+
+                <!-- Remind Passowrd -->
+                <div id="formFooter">
+                    <a class="underlineHover" href="#">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

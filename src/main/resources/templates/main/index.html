@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="uz" xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layout}"
+      xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.3/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/5.15.1/css/all.css}"/>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<div layout:fragment="content">
+
+    <div sec:authorize="isAuthenticated()">
+
+        <div class="container" style="">
+            <nav class="navbar  navbar-expand-lg navbar-light ">
+                <a class="navbar-brand" href="/index.html">
+                    <img th:src="@{/photos/openworldicon.jpg}" alt="yoq"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#id_navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse  navbar-collapse" id="id_navbar" style="">
+                    <ul class="navbar-nav bg-white p-4 p-lg-0 rounded ml-auto">
+                        <li class="nav-item">
+
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <main class="container p-3">
+<!--<h4 class="text-center mb-4 text-justify"><span class="text">All Reports</span></h4>-->
+            <div class="row">
+                <div class="col-md-3 content">
+                    <div class="view view-cascade gradient-card-header text-center z-depth-1 rounded" style="border-radius: 10px; padding: 15px; margin: -8px; background-color: #1865f2;">
+                        <p class="h6 mt-1 text-white font-weight-bold">Our Teachers</p>
+                        <a href="/logiin" class="stretched-link"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 content">
+                    <div class="view view-cascade gradient-card-header text-center z-depth-1 rounded" style="border-radius: 10px; padding: 15px; margin: -8px; background-color: #1865f2;">
+                        <p class="h6 mt-1 text-white font-weight-bold">IELTS Books</p>
+                        <a href="/logiiin" class="stretched-link"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 content">
+                    <div class="view view-cascade gradient-card-header text-center z-depth-1 rounded" style="border-radius: 10px; padding: 15px; margin: -8px; background-color: #1865f2;">
+                        <p class="h6 mt-1 text-white font-weight-bold">IELTS Certificates</p>
+                        <a href="/image/show" class="stretched-link"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 content">
+                    <div class="view view-cascade gradient-card-header text-center z-depth-1 rounded" style="border-radius: 10px; padding: 15px; margin: -8px; background-color: #1865f2;">
+                        <p class="h6 mt-1 text-white font-weight-bold">Our Alboms</p>
+                        <a href="/ourphotos" class="stretched-link"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 content">
+                    <div class="view view-cascade gradient-card-header text-center z-depth-1 rounded" style="border-radius: 10px; padding: 15px; margin: -8px; background-color: red;">
+                        <p class="h6 mt-1 text-white font-weight-bold">Logout</p>
+                        <a href="/logout" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+      </div>
+
+
+    <!--Index Page -->
+    <div sec:authorize="isAnonymous()" >
+        <div class="container" style="">
+            <nav class="navbar  navbar-expand-lg navbar-light ">
+                <a class="navbar-brand" href="/index.html">
+                    <img th:src="@{/photos/openworldicon.jpg}" alt="yoq"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#id_navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse  navbar-collapse" id="id_navbar" style="">
+                    <ul class="navbar-nav bg-white p-4 p-lg-0 rounded ml-auto">
+                        <li class="nav-item active">
+
+                            <a class="nav-link text-secondary" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#">Our Focus</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-secondary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Portfolio
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-secondary" href="#">Action</a>
+                                <a class="dropdown-item text-secondary" href="#">Another action</a>
+                                <div class="dropdown-divider text-secondary"></div>
+                                <a class="dropdown-item text-secondary" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#">Our Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#">Work Space</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="/registration">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="/login">Login In</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="header d-flex align-items-center justify-content-center flex-column text-white ">
+            <div class="font-libre text-center t1">OPEN WORLD <br/> SPOT OF REAL KNOWLEDGE </div>
+                </div>
+
+
+
+<div class="bg-light">
+    <div class="container py-5">
+        <div class="row h-100 align-items-center py-5">
+            <div class="col-lg-6">
+                <h1 class="display-4">About us </h1>
+                <p class="lead text-muted mb-0"> OPEN WORLD creates future, gives real, lifelong knowledge. We want the world to be better place. THIS IS SPOT OF REAL KNOWLEDGE</p>
+                </p>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block"><img src="	https://uploads-ssl.webflow.com/604a1887a20b5ac3cc27b81d/6072290e447375168c66d7e5_blogging-p-500.png" alt="" class="img-fluid"></div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5 px-5 mx-auto"><img src="https://uploads-ssl.webflow.com/604a1887a20b5ac3cc27b81d/6072290e447375168c66d7e5_blogging-p-500.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+            <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+                <h2 class="font-weight-light">Cutting edge language center</h2>
+                <p class="font-italic text-muted mb-4">OPEN WORLD uses modern technologies and pure English classes with authentic, reliable materials that guarantees effective learning</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light py-5">
+    <div class="container py-5">
+        <div class="bg-white py-5">
+            <div class="container py-5">
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+                        <h2 class="font-weight-light">OUR TEACHING METHODS.</h2>
+                        <p class="font-italic text-muted mb-4">Teaching with modern technologies, teching with passion and caring about our students make OPEN WORLD one of a kind language center</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+                    </div>
+                    <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://uploads-ssl.webflow.com/604a1887a20b5ac3cc27b81d/6072290e447375168c66d7e5_blogging-p-500.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 px-5 mx-auto"><img src="https://uploads-ssl.webflow.com/604a1887a20b5ac3cc27b81d/6072290e447375168c66d7e5_blogging-p-500.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+                    <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+                        <h2 class="font-weight-light">Cutting edge language center</h2>
+                        <p class="font-italic text-muted mb-4">OPEN WORLD uses modern technologies and pure English classes with authentic, reliable materials that guarantees effective learning</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-light py-5">
+            <div class="container py-5">
+                <div class="row mb-4">
+                    <div class="col-lg-5">
+                        <h2 class="display-4 font-weight-light">Our team</h2>
+                        <p class="font-italic text-muted"></p>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <!-- Team item-->
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="http://www.webcoderskull.com/img/team4.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Komola Ermatova</h5><span class="small text-uppercase text-muted">Manager</span>
+                            <ul class="social mb-0 list-inline mt-3">
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End-->
+
+                    <!-- Team item-->
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="http://www.webcoderskull.com/img/team4.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Sardor Mirdavidov</h5><span class="small text-uppercase text-muted">Teacher</span>
+                            <ul class="social mb-0 list-inline mt-3">
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End-->
+
+                    <!-- Team item-->
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="http://www.webcoderskull.com/img/team4.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Muhammad Iso Ermatov</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+                            <ul class="social mb-0 list-inline mt-3">
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End-->
+
+                    <!-- Team item-->
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="http://www.webcoderskull.com/img/team4.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Zarif G`ulomov</h5><span class="small text-uppercase text-muted">Administrator</span>
+                            <ul class="social mb-0 list-inline mt-3">
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End-->
+
+                </div>
+            </div>
+        </div>
+        <!--Section: Contact v.1-->
+        <section class="section pb-5">
+
+            <!--Section heading-->
+            <h2 class="section-heading h1 pt-4">Contact us</h2>
+            <!--Section description-->
+            <p class="section-description pb-4"></p>
+
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-lg-5 mb-4">
+
+                    <!--Form with header-->
+                    <div class="card">
+
+                        <div class="card-body">
+                            <!--Header-->
+                            <div class="form-header blue accent-1">
+                                <h3><i class="fas fa-envelope"></i> Write to us:</h3>
+                            </div>
+
+                            <p>We'll write rarely, but with only the best content.</p>
+                            <br>
+
+                            <!--Body-->
+                            <div class="md-form">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="text" id="form-name" class="form-control">
+                                <label for="form-name">Your name</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fas fa-envelope prefix grey-text"></i>
+                                <input type="text" id="form-email" class="form-control">
+                                <label for="form-email">Your email</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fas fa-tag prefix grey-text"></i>
+                                <input type="text" id="form-Subject" class="form-control">
+                                <label for="form-Subject">Subject</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fas fa-pencil-alt prefix grey-text"></i>
+                                <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea>
+                                <label for="form-text">Icon Prefix</label>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button class="btn btn-light-blue">Submit</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--Form with header-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-7">
+
+                    <!--Google map-->
+                    <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1498.8140222290713!2d69.67360798429165!3d41.29519899917054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38afab2dc8fa9499%3A0xbd9fdfd31ba21646!2sOlmos%20MCHJ!5e0!3m2!1sru!2s!4v1606553680682!5m2!1sru!2s"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+
+                    <br>
+                    <!--Buttons-->
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+                            <p>Parkent Tumani  </p>
+                            <p>Toshkent Viloyati</p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+                            <p>+998 99 401 04 75</p>
+                            <p>Mon - Fri, 8:00-22:00</p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+                            <p>info@gmail.com</p>
+                            <p>sale@gmail.com</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+
+        </section>
+        <!--Section: Contact v.1-->
+
+
+
+
+
+
+        <footer class="bg-light pb-5">
+            <div class="container text-center">
+                <p class="font-italic text-muted mb-0">&copy;Created by Imomov Shohjahonbek</p>
+            </div>
+        </footer>
+
+<!--        <div >-->
+<!--        <div class="row ">-->
+<!--            <div class="col-sm-4">-->
+<!--                <div class="card shadow-lg p-3 mb-5 bg-white rounded">-->
+<!--                    <div class="card-body ">-->
+<!--                        <h5 class="card-title">Special title treatment</h5>-->
+<!--                        <p class="card-text">With supporting text </p>-->
+<!--                        <a href="/login" class="btn btn-primary">  Kirish  </a>-->
+<!--                        <a href="/registration" class="btn btn-primary">Registratsiya</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    </div></div></div>
+</div>
+</body>
+</html>
